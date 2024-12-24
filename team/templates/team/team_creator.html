@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Создать команду</title>
+</head>
+<body>
+    <h1>Создать новую команду</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Создать</button>
+    </form>
+    <a href="{% url 'creator_list' %}">К списку создателей</a>
+</body>
+</html>

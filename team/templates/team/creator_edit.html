@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Изменить</title>
+</head>
+<body>
+
+    <h2>Редактирование создателя: {{ creator.name }}</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" value="{{ creator.name }}">
+        <button type="submit">Сохранить</button>
+        <a href="{% url 'creator_list' %}">Отмена</a>
+    </form>
+
+</body>
+</html>
